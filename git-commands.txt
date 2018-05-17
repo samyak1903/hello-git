@@ -1,0 +1,57 @@
+Basic Git commands and its functions :
+
+1) Tell Git who you are
+
+Configure the author name and email address to be used with your commits.
+
+	git config --global user.name "xyz"
+
+	git config --global user.email "samyak@example.com"
+
+2) init :
+
+Create a new local repository 
+
+	git init
+	(tells the git its working space)
+
+3) add :
+
+Adds all modified and new (untracked) files in the current directory and all subdirectories to the staging area (a.k.a. the index), thus preparing them to be included in the next git commit .
+
+	git add <filename>
+	(FOR SINGLE FILE)
+	git add .
+	(FOR MULTIPLE FILES)
+
+4) commit :
+
+git commit record your changes to the local repository.
+
+	git commit -m "Commit message"
+	(-m to print the commit message)
+
+By using the -a switch with the commit command to automatically "add" changes from all known files (i.e. all files that are already listed in the index) and then perform the actual commit.
+
+	git commit -a
+
+5) push :
+
+Push Send changes to the master branch of your remote repository:
+
+	git push origin master
+
+6) status : 
+
+List the files you've changed and those you still need to add or commit.
+
+	git status
+
+7) remote :
+Connect to a remote repository ,If you haven't connected your local repository to a remote server, add the server to be able to push to it:
+
+	git remote add origin <server>
+
+List all currently configured remote repositories:
+	
+	git remote -v
